@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <h1>Simple Shop</h1>
+    <div class="search-box">
+      <input type="text" placeholder="Tìm kiếm sản phẩm..." />
+    </div>
+    <div class="auth">
+      <a href="./auth/login.html" class="login">Đăng nhập</a>
+      <button class="register">Đăng ký</button>
+    </div>
+  </header>
+
+  <!-- FILTER -->
+  <div class="filter">
+    <select>
+      <option>Danh mục</option>
+      <option>Giày</option>
+      <option>Áo</option>
+      <option>Quần</option>
+    </select>
+
+    <select>
+      <option>Sắp xếp</option>
+      <option>Giá tăng dần</option>
+      <option>Giá giảm dần</option>
+      <option>Lượt mua</option>
+    </select>
+  </div>
+
+  <!-- PRODUCT LIST -->
+  <div class="products">
+    <div class="product">
+      <img src="./img/11b377e86aa344879afba431d7cee9da5ee62cde.png" />
+      <h3>Sản phẩm 1</h3>
+      <div class="price">500.000đ</div>
+      <div class="desc">Mô tả ngắn sản phẩm</div>
+      <button>Thêm vào giỏ</button>
+    </div>
+
+    <div class="product">
+      <img src="./img/0507db32e190425c8e91ed35ab3894e77679cedd.png" />
+      <h3>Sản phẩm 2</h3>
+      <div class="price">750.000đ</div>
+      <div class="desc">Mô tả ngắn sản phẩm</div>
+      <button>Thêm vào giỏ</button>
+    </div>
+
+    <div class="product">
+      <img src="./img/11b377e86aa344879afba431d7cee9da5ee62cde.png" />
+      <h3>Sản phẩm 3</h3>
+      <div class="price">1.000.000đ</div>
+      <div class="desc">Mô tả ngắn sản phẩm</div>
+      <button>Thêm vào giỏ</button>
+    </div>
+  </div>
+
+  <!-- PAGINATION -->
+  <div class="pagination">
+    <button>1</button>
+    <button>2</button>
+    <button>3</button>
+  </div>
+
+  <!-- CART -->
+  <div class="cart">
+    <h2>Giỏ hàng</h2>
+    <div class="cart-item">
+      <span>Sản phẩm 1 x 1</span>
+      <span>500.000đ</span>
+    </div>
+    <div class="cart-item">
+      <span>Sản phẩm 2 x 2</span>
+      <span>1.500.000đ</span>
+    </div>
+    <strong>Tổng tiền: 2.000.000đ</strong>
+  </div>
+
+  <!-- CHECKOUT -->
+  <div class="checkout">
+    <h2>Thanh toán</h2>
+    <input type="text" placeholder="Họ và tên" />
+    <input type="text" placeholder="Số điện thoại" />
+    <input type="text" placeholder="Địa chỉ" />
+    <button>Đặt hàng</button>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/axios@1.13.2/dist/axios.min.js"></script>
+
+</body>
+
+</html>
+
+
+</html>
