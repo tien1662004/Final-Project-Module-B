@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./cart.css">
+  <script src="https://cdn.jsdelivr.net/npm/axios@1.13.2/dist/axios.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <h1>🛒 Giỏ hàng</h1>
+    <a href="/index.html">← Tiếp tục mua</a>
+  </header>
+
+  <div class="container">
+    <table>
+      <thead>
+        <tr>
+          <th>Sản phẩm</th>
+          <th>Giá</th>
+          <th>Số lượng</th>
+          <th>Tổng</th>
+          <th>Xoá</th>
+        </tr>
+      </thead>
+      <tbody id="cartBody"></tbody>
+    </table>
+
+    <div class="summary">
+      <h3>Tổng tiền: <span id="totalPrice">0đ</span></h3>
+      <button id="checkoutBtn">Thanh toán</button>
+    </div>
+  </div>
+
+  <script src="cart.js"></script>
+</body>
+
+</html>

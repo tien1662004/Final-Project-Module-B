@@ -8,22 +8,27 @@ const errors = document.querySelectorAll(".error");
 /* LOGIN */
 async function login(email, password) {
   try {
-    const { data } = await axios.post(`${api}/auth/login`, {
+    const res = await axios.post(`${api}/auth/login`, {
       email,
       password,
     });
-    localStorage.setItem("user", JSON.stringify(data.data));
+
+    const userData = res.data.data;
+
+    // LƯU USER ĐÚNG CHUẨN CHO auth.js
+    localStorage.setItem(
+      "user",
+      JSON.stringify({
+        id: userData.user._id,
+        email: userData.user.email,
+        token: userData.accessToken,
+      })
+    );
+
     alert("Đăng nhập thành công");
 
-    window.location.pathname = "index.html";
-  } catch (error) {
-    alert(error.response?.data?.message || error.message);
-  }
-}
-async function register(email, password) {
-  try {
-    await axios.post(`${api}/auth/register`, { email, password });
-    alert("Đăng ký thành công");
+    // ⚠️ QUAN TRỌNG
+    window.location.href = "../index.html";
   } catch (error) {
     alert(error.response?.data?.message || error.message);
   }
@@ -32,7 +37,6 @@ async function register(email, password) {
 loginForm.addEventListener("submit", function (e) {
   e.preventDefault();
 
-  // reset lỗi
   errors.forEach((err) => (err.style.display = "none"));
 
   let isValid = true;
@@ -50,5 +54,6 @@ loginForm.addEventListener("submit", function (e) {
   }
 
   if (!isValid) return;
+
   login(emailInput.value, passwordInput.value);
 });

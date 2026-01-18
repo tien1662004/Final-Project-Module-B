@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./checkout.css" />
+  <script src="https://cdn.jsdelivr.net/npm/axios@1.13.2/dist/axios.min.js"></script>
+</head>
+
+<body>
+  <div class="checkout-container">
+    <h2>Thanh toán đơn hàng</h2>
+
+    <!-- DANH SÁCH SẢN PHẨM -->
+    <div id="orderList"></div>
+
+    <!-- TỔNG TIỀN -->
+    <div class="total">
+      Tổng tiền: <span id="totalPrice">0đ</span>
+    </div>
+
+    <!-- FORM THANH TOÁN -->
+    <form id="checkoutForm">
+      <div class="form-group">
+        <label>Họ tên</label>
+        <input type="text" id="name" />
+        <small class="error"></small>
+      </div>
+
+      <div class="form-group">
+        <label>Số điện thoại</label>
+        <input type="text" id="phone" />
+        <small class="error"></small>
+      </div>
+
+      <div class="form-group">
+        <label>Địa chỉ</label>
+        <textarea id="address"></textarea>
+        <small class="error"></small>
+      </div>
+
+      <button type="submit">Xác nhận thanh toán</button>
+    </form>
+  </div>
+
+  <script src="./checkout.js"></script>
+</body>
+
+</html>
